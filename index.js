@@ -7,4 +7,8 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
+app.get('/thanks', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/thanks.html'));
+});
+
 app.listen(port, () => console.log(`Dotlet listening on port ${port}!`))
